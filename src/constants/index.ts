@@ -3,6 +3,7 @@ import {
   bagImg,
   blackImg,
   blueImg,
+  gasPumpImg,
   highlightFirstmv,
   highlightFourthmv,
   highlightSectmv,
@@ -117,4 +118,30 @@ export const footerLinks = [
   "Sales Policy",
   "Legal",
   "Site Map",
+];
+
+
+
+export const blogs = [
+  {
+    coverImage: gasPumpImg,
+    title: "Understanding CNG Conversion",
+    readDuration: "5 min read",
+    datePublished: "2023-10-01",
+    content: `Compressed Natural Gas (CNG) is a cleaner fuel alternative... (add your full blog text here)`,
+  },
+  {
+    coverImage: gasPumpImg,
+    title: "Benefits of CNG for Vehicles",
+    readDuration: "6 min read",
+    datePublished: "2023-09-28",
+    content: `Switching to CNG can lead to cost savings and reduced emissions... (add your full blog text here)`,
+  },
+  {
+    coverImage: gasPumpImg,
+    title: "Autogas Training Programs",
+    readDuration: "4 min read",
+    datePublished: "2023-09-20",
+    content: `Autogas Nigeria offers a range of training programs... (add your full blog text here)`,
+  },
 ];

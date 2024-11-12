@@ -22,6 +22,7 @@ export const playImg = "/assets/images/play.svg";
 export const pauseImg = "/assets/images/pause.svg";
 export const service1Img = "/assets/images/ic_mechanic.svg";
 export const rectangleImg = "/assets/images/rectangle.png";
+export const gasPumpImg = "/assets/images/gasPump.jpeg";
 
 export const yellowImg = "/assets/images/yellow.jpg";
 export const blueImg = "/assets/images/blue.jpg";
