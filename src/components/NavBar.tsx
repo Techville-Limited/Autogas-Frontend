@@ -31,7 +31,7 @@ export function Navbar() {
         'flex',
         'absolute',
         'top-[60px]',
-        'bg-gray-800',
+        'bg-white',
         'w-full',
         'p-4',
         'left-0',
@@ -48,7 +48,7 @@ export function Navbar() {
 
   return (
       //  <header className="w-full py-5 sm:px-10 px-5 flex justify-between items-center">
-      <nav className=' text-textcolor p-4 sm:p-4 md:flex md:justify-between md:items-center'>
+      <nav className='bg-bgcolor text-textcolor p-4 sm:p-4 md:flex md:justify-between md:items-center'>
         <Image src={logoImg} alt="autogas" width={128} height={28} />
         <div className={getMenuClasses()}>
           <Link rel='stylesheet' href='/' className='mx-2 hover:text-gray-300'>

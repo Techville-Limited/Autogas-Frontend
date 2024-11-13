@@ -1,6 +1,10 @@
 import {
   appleImg,
   bagImg,
+  banner1Img,
+  banner2Img,
+  banner3Img,
+  banner4Img,
   blackImg,
   blueImg,
   gasPumpImg,
@@ -17,40 +21,48 @@ import {
 
 export const navLists = ["Store", "Mac", "iPhone", "Support"];
 
+// constants.ts
 export const hightlightsSlides = [
   {
     id: 1,
-    textLists: [
-      "Driving Nigeria’s Clean Energy Future",
-      // "Game‑changing chip.",
-      // "Groundbreaking performance.",
-    ],
-    video: logoImg,
-    videoDuration: 4,
+    headerText: "Driving Nigeria’s Clean Energy Future",
+    smallerText: "Transforming energy with CNG solutions",
+    mediaType: "image", // or "video"
+    media: banner1Img,
+    contentType: "media",
+    mediaDuration: 4,
   },
   {
     id: 2,
-    textLists: ["Titanium.", "So strong. So light. So Pro."],
-    video: bagImg,
-    videoDuration: 5,
+    headerText: "Titanium.",
+    smallerText: "So strong. So light. So Pro.",
+    mediaType: "image",
+    media: banner2Img,
+    contentType: "nav",
+    mediaDuration: 5,
+    buttonText: "Explore"
   },
   {
     id: 3,
-    textLists: [
-      "iPhone 15 Pro Max has the",
-      "longest optical zoom in",
-      "iPhone ever. Far out.",
-    ],
-    video: appleImg,
-    videoDuration: 2,
+    headerText: "iPhone 15 Pro Max",
+    smallerText: "Longest optical zoom in iPhone ever. Far out.",
+    mediaType: "image",
+    media: banner3Img,
+    contentType: "media",
+    mediaDuration: 2,
   },
   {
     id: 4,
-    textLists: ["All-new Action button.", "What will yours do?."],
-    video: searchImg,
-    videoDuration: 3.63,
+    headerText: "Upcoming Conference.",
+    smallerText: "What will yours do?",
+    mediaType: "video",
+    media: highlightFirstmv,
+    contentType: "form",
+    mediaDuration: 5,
+    buttonText: "Register Now"
   },
 ];
+
 
 export const ourServices =[
   {
@@ -80,47 +92,6 @@ export const whyChooseUs = [
   "Sustainability initiatives"
 ]
 
-export const models = [
-  {
-    id: 1,
-    title: "iPhone 15 Pro in Natural Titanium",
-    color: ["#8F8A81", "#ffe7b9", "#6f6c64"],
-    img: yellowImg,
-  },
-  {
-    id: 2,
-    title: "iPhone 15 Pro in Blue Titanium",
-    color: ["#53596E", "#6395ff", "#21242e"],
-    img: blueImg,
-  },
-  {
-    id: 3,
-    title: "iPhone 15 Pro in White Titanium",
-    color: ["#C9C8C2", "#ffffff", "#C9C8C2"],
-    img: whiteImg,
-  },
-  {
-    id: 4,
-    title: "iPhone 15 Pro in Black Titanium",
-    color: ["#454749", "#3b3b3b", "#181819"],
-    img: blackImg,
-  },
-];
-
-export const sizes = [
-  { label: '6.1"', value: "small" },
-  { label: '6.7"', value: "large" },
-];
-
-export const footerLinks = [
-  "Privacy Policy",
-  "Terms of Use",
-  "Sales Policy",
-  "Legal",
-  "Site Map",
-];
-
-
 
 export const blogs = [
   {
@@ -145,3 +116,31 @@ export const blogs = [
     content: `Autogas Nigeria offers a range of training programs... (add your full blog text here)`,
   },
 ];
+
+export const testimonials = [
+  {
+    name: "John Doe",
+    image: "https://randomuser.me/api/portraits/men/1.jpg",
+    rating: 4.5,
+    location: "New York, USA",
+    testimony:
+      "This service has transformed my daily routine. Highly recommended!",
+  },
+  {
+    name: "Jane Smith",
+    image: "https://randomuser.me/api/portraits/women/1.jpg",
+    rating: 5,
+    location: "Los Angeles, USA",
+    testimony:
+      "An incredible experience! The team was professional and very helpful.",
+  },
+  {
+    name: "Carlos Rossi",
+    image: "https://randomuser.me/api/portraits/women/3.jpg",
+    rating: 4,
+    location: "Rome, Italy",
+    testimony:
+      "A truly wonderful service that I would recommend to anyone. Thank you!",
+  },
+];
+

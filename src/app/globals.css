@@ -30,7 +30,7 @@ canvas {
 }
 
 @layer utilities {
-  .button{
+  .button {
     @apply bg-buttoncolor text-white px-6 py-2 rounded-md hover:bg-buttoncolor-hover transition duration-200;
   }
 
@@ -59,16 +59,16 @@ canvas {
   }
 
   .common-padding {
-    @apply sm:py-32 py-20 sm:px-10 px-5;
+    @apply sm:py-32 py-2 sm:px-10 px-5;
   }
 
   .section-heading {
     @apply text-textcolor lg:text-6xl md:text-5xl text-3xl lg:mb-0 mb-5 font-medium opacity-0 translate-y-20 text-center;
   }
 
- .feature-text {
-  @apply text-textcolor text-lg md:text-xl opacity-0 translate-y-[100px] w-full text-justify;
-}
+  .feature-text {
+    @apply text-textcolor text-lg md:text-xl opacity-0 translate-y-[100px] w-full text-justify;
+  }
 
   .feature-text-container {
     @apply w-full flex-center flex-col md:flex-row mt-10 md:mt-16 gap-5;

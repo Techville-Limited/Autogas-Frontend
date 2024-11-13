@@ -6,6 +6,9 @@ import BlogCard from './BlogCard';
 import { blogs } from '@/constants';
 import Slider from "react-slick";
 import { getSnippet } from '@/utils/getSnippet';
+import { FaChevronRight } from 'react-icons/fa';
+import { Button } from './ui/button';
+import Link from 'next/link';
 
 
 const HomeBlogs = () => {
@@ -47,7 +50,7 @@ const HomeBlogs = () => {
 
 
   return (
-    <section className='common-padding'>
+    <section className='mb-8'>
         <div className='screen-max-width'>
              <div className="mb-12 w-full">
           <h1 id="home_blogs_title" className="section-heading">
@@ -85,6 +88,12 @@ Latest from Autogas
             ))}
           </Slider>
         </div>
+<div className="mt-3 p-8 flex justify-end items-center cursor-pointer text-blue-600 font-semibold">
+   <Button className='button align-middle' asChild>
+      <Link href="/login">Read More</Link>
+    </Button>
+      </div>
+
         </div>
     </section>
   )

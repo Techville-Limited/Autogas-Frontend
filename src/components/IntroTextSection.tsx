@@ -9,14 +9,13 @@ import Link from 'next/link';
 const IntroTextSection = () => {
 
      useGSAP(() => {
-
     // animateWithGsap("#exploreVideo")
     animateWithGsap("#features_title", {
       y: 0,
       opacity: 1,
     });
     animateWithGsap(
-      ".g_grow",
+      ".g_text",
       {
         scale: 1,
         opacity: 1,
@@ -32,12 +31,18 @@ const IntroTextSection = () => {
     });
   });
   return (
-  <section className="flex-1 w-full common-padding flex flex-col justify-center items-center">
+  <section className="mt-8">
   <div className="screen-max-width">
     <p className="feature-text g_text text-center">
-      Autogas Nigeria, established in 2021, is focused on transforming Nigeria’s energy sector by promoting Compressed Natural Gas (CNG) as a cleaner and more cost-effective alternative to traditional fuels. <br /> <br />
+      <span className='g_text'>
+        Autogas Nigeria, established in 2021, is focused on transforming Nigeria’s energy sector by promoting Compressed Natural Gas (CNG) as a cleaner and more cost-effective alternative to traditional fuels.
+        </span> <br /> 
+      <br /> 
+      <span className='g_text'>
+        The company provides vehicle conversion services, CNG refueling infrastructure, high-quality CNG equipment, and training. With a commitment to sustainability and innovation, Autogas Nigeria seeks to make CNG widely accessible for transportation, industry, and power generation, aiming to reduce reliance on petrol and diesel, lower carbon emissions, and drive economic growth through job creation.
+        </span> 
       
-      The company provides vehicle conversion services, CNG refueling infrastructure, high-quality CNG equipment, and training. With a commitment to sustainability and innovation, Autogas Nigeria seeks to make CNG widely accessible for transportation, industry, and power generation, aiming to reduce reliance on petrol and diesel, lower carbon emissions, and drive economic growth through job creation.
+      
     </p> 
   </div>
   <div className="flex justify-center w-full mt-8">

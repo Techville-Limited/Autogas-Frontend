@@ -2,6 +2,16 @@ import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+
+
 interface ServiceCardProps {
   service: {
     serviceId: number;
@@ -14,7 +24,11 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ service, handleButtonClick }) => {
   return (
-    <div className="bg-white border-2 border-gradient-to-t from-buttoncolor to-textcolor p-6 rounded-lg flex flex-col items-start relative">
+    <div className="rounded-lg p-0.5 bg-gradient-to-b from-buttoncolor to-textcolor shadow-lg">
+    <Card className="bg-white  p-6 rounded-lg flex flex-col items-start relative shadow-lg">
+  
+  <CardContent >
+    <div >
 
         <div>
              {/* Icon - Positioned at the top right */}
@@ -32,11 +46,21 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, handleButtonClick })
 
         </div>
      
+    </div>
+  </CardContent>
+  <CardFooter>
+    
       {/* Button at the bottom right */}
-         <Button className='mt-auto text-white py-2 px-4 rounded-md absolute bottom-4 right-4 bg-buttoncolor' asChild onClick={() => handleButtonClick(service.serviceId)}>
+         <Button className='mt-auto text-white py-2 px-4 rounded-md bottom-4 right-4 bg-buttoncolor hover:bg-buttoncolor-hover' asChild onClick={() => handleButtonClick(service.serviceId)}>
       <Link href="/login">Learn More</Link>
     </Button>
+  </CardFooter>
+</Card>
+
     </div>
+
+
+    
   );
 };
 

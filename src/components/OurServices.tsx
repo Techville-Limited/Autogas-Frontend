@@ -5,6 +5,7 @@ import { useGSAP } from '@gsap/react';
 import React from 'react'
 import ServiceCard from './ServiceCard';
 import { Swiper, SwiperSlide } from "swiper/react";
+import Slider from 'react-slick';
 
 const OurServices = () => {
       useGSAP(() => {
@@ -31,6 +32,16 @@ const OurServices = () => {
     });
   });
 
+    const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+  };
+
+
     // Define the higher-order function to handle the button click
   const handleButtonClick = (serviceId: number): void => {
     console.log(`Service with ID ${serviceId} was clicked`);
@@ -38,39 +49,29 @@ const OurServices = () => {
   };
 
   return (
-    <section className='common-padding'>
+    <section className='mb-8'>
         <div className='screen-max-width'>
              <div className="mb-12 w-full">
           <h1 id="features_title" className="section-heading">
             Our Services
           </h1>
         </div>
-          <div className="feature-text-container">
-                {/* Swiper for smaller screens */}
-      <div className="sm:hidden">
-        <Swiper
-          spaceBetween={10} // Space between slides
-          slidesPerView={1} // One slide per view on mobile
-          loop={true} // Enable loop for continuous scrolling
-          autoplay={{ delay: 3000 }} // Autoplay for the carousel
-        >
-          {ourServices.map((service) => (
-            <SwiperSlide key={service.serviceId}>
-              <ServiceCard service={service} handleButtonClick={handleButtonClick} />
-            </SwiperSlide>
+          {/* Display blogs in a grid on large screens and in a slider on small screens */}
+        <div className="hidden lg:grid grid-cols-3 gap-6">
+          {ourServices.map((service, index) => (
+             <ServiceCard service={service} handleButtonClick={handleButtonClick} />
           ))}
-        </Swiper>
-      </div>
-
-      {/* Flex Row for larger screens */}
-      <div className="hidden sm:flex flex-wrap justify-center gap-6">
-        {ourServices.map((service) => (
-          <div key={service.serviceId} className="w-full sm:w-1/3 lg:w-1/4">
-            <ServiceCard service={service} handleButtonClick={handleButtonClick} />
-          </div>
-        ))}
-      </div>
+        </div>
+        <div className="lg:hidden">
+          <Slider {...sliderSettings}>
+            {ourServices.map((service, index) => (
+              <div key={index} className="px-4">
+               <ServiceCard service={service} handleButtonClick={handleButtonClick} />
               </div>
+            ))}
+          </Slider>
+        </div>
+         
         </div>
     </section>
   )

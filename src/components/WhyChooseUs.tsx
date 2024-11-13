@@ -1,6 +1,6 @@
 "use client"
 import { whyChooseUs } from '@/constants';
-import { logoImg, rectangleImg } from '@/utils';
+import { gasPumpImg, logoImg, rectangleImg } from '@/utils';
 import { animateWithGsap } from '@/utils/animations';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -55,21 +55,21 @@ const WhyChooseUs = () => {
   });
 
   return (
-    <section className='common-padding'>
+    <section className='mb-8'>
         <div className='screen-max-width'>
              <div className="mb-12 w-full">
           <h1 id="wcu_title" className="section-heading">
             Why Choose Us
           </h1>
           <h2 className='hiw-subtitle'>
-Why CNG is the future of Energy in Nigeria
+            Why CNG is the future of Energy in Nigeria
           </h2>
         </div>
          <div className="flex flex-col md:flex-row items-center justify-center md:space-x-8 p-6 rounded-lg">
 
       {/* Image Section */}
       <div className="w-full md:w-1/2 mb-6 md:mb-0">
-        <img src={rectangleImg} alt={'whyChooseUs'} className="rounded-lg shadow-lg w-full h-auto" />
+        <img src={rectangleImg} alt={'whyChooseUs'} height={4} className="rounded-lg shadow-lg " />
       </div>
 
       {/* Text and Checkbox List Section */}

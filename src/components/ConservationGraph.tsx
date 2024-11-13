@@ -26,12 +26,12 @@ const ConservationGraph = () => {
         label: "Petrol",
                 data: isInView ? fullDataValues.petrol : Array(fullDataValues.petrol.length).fill(0),
 
-        backgroundColor: "rgba(54, 162, 235, 0.7)", // Blue color
+        backgroundColor: "#2997FF", // Blue color
       },
       {
         label: "CNG",
         data: isInView ? fullDataValues.cng : Array(fullDataValues.cng.length).fill(0),
-        backgroundColor: "rgba(255, 99, 132, 0.7)", // Red color
+        backgroundColor: "#F53B01", // Red color
       },
     ],
   };
@@ -104,7 +104,7 @@ const ConservationGraph = () => {
   
 
   return (
-    <section className='common-padding'>
+    <section className='mb-8'>
         <div className='screen-max-width'>
               <div className="mb-12 w-full">
           <h1 id="fvc_title" className="section-heading">
